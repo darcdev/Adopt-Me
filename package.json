@@ -1,0 +1,32 @@
+{
+  "name": "adoptme",
+  "version": "1.0.0",
+  "description": "![adoptme](http://static.frontendmasters.com/resources/2019-05-02-complete-intro-react-v5/image-logo.png)",
+  "main": "app.js",
+  "scripts": {
+    "dev": "parcel src/index.html ",
+    "lint": "eslint \"src/**/*.{js,jsx} --quiet\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darcdev/Adopt-Me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darcdev/Adopt-Me/issues"
+  },
+  "homepage": "https://github.com/darcdev/Adopt-Me#readme",
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
