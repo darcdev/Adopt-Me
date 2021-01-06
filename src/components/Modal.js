@@ -11,6 +11,7 @@ const Modal = ({ children }) => {
   useEffect(() => {
     const modalroot = document.getElementById("modal");
     modalroot.appendChild(elRef.current);
+    console.log("hi");
 
     return () => modalroot.removeChild(elRef.current);
   });
