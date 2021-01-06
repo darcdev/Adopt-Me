@@ -27,6 +27,6 @@ const App = () => {
     </React.StrictMode>
   );
 };
-//babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
+// babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
 
 render(<App />, document.getElementById("root"));
