@@ -1,10 +1,9 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState } from "react";
 import { render } from "react-dom";
 import { Link, Router } from "@reach/router";
 import SearchParams from "./components/SearchParams";
+import Details from "./components/Details";
 import ThemeContext from "./context/ThemeContext";
-
-const Details = lazy(() => import("./components/Details"));
 
 const App = () => {
   const themeHook = useState("darkblue");
@@ -16,12 +15,10 @@ const App = () => {
             <Link to="/">Adopt Me!</Link>
           </header>
 
-          <Suspense fallback={<h1>Loading route...</h1>}>
-            <Router>
-              <SearchParams path="/" />
-              <Details path="/details/:id" />
-            </Router>
-          </Suspense>
+          <Router>
+            <SearchParams path="/" />
+            <Details path="/details/:id" />
+          </Router>
         </div>
       </ThemeContext.Provider>
     </React.StrictMode>
@@ -29,4 +26,4 @@ const App = () => {
 };
 //babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
 
-render(<App />, document.getElementById("root"));
+export default App;
