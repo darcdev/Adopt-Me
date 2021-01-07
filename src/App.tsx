@@ -1,17 +1,17 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense, FunctionComponent } from "react";
 import { render } from "react-dom";
+import { Provider } from 'react-redux';
 import { Link, Router } from "@reach/router";
 import SearchParams from "./components/SearchParams";
-import ThemeContext from "./context/ThemeContext";
+import store from './store';
 
 const Details = lazy(() => import("./components/Details"));
 
-const App = () => {
-  const themeHook = useState("darkblue");
+const App : FunctionComponent = () => {
   return (
     <React.StrictMode>
-      <ThemeContext.Provider value={themeHook}>
-        <div>
+      <Provider store={store}>
+      <div>
           <header>
             <Link to="/">Adopt Me!</Link>
           </header>
@@ -23,7 +23,8 @@ const App = () => {
             </Router>
           </Suspense>
         </div>
-      </ThemeContext.Provider>
+      </Provider>
+       
     </React.StrictMode>
   );
 };
